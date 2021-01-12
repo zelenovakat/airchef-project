@@ -1,5 +1,15 @@
 import styles from "./layout.module.css"
+import Header from "../components/shared/header"
+import Footer from "../components/shared/footer"
 
-export default function Layout({ children }) {
-  return <div className={styles.container}>{children}</div>
+const Layout = ({ children }) => {
+  return (
+    <>
+      <Header />
+      {children}
+      <Footer />
+    </>
+  )
 }
+
+export default Layout
