@@ -1,5 +1,7 @@
 import styled from "styled-components"
 import { black, white } from "../colors"
+import { mediaSmall, mediaXs } from "../screen"
+import MobileMenu from "./mobileMenu"
 
 const Header = () => {
   return (
@@ -22,16 +24,28 @@ const Header = () => {
           <LogoLink href="/">Airchef</LogoLink>
         </li>
       </Logo>
+      <MobileMenuDiv>
+        <MobileMenu />
+      </MobileMenuDiv>
     </MainDiv>
   )
 }
 
 export default Header
 
+const MobileMenuDiv = styled.div`
+  display: flex;
+  ${mediaSmall} {
+    display: none;
+  }
+`
+
 const Logo = styled.div`
+  width: 100%;
   display: flex;
   justify-content: center;
   list-style: none;
+  align-items: center;
   li {
     margin: 0;
   }
@@ -48,13 +62,18 @@ const LogoLink = styled.a`
 `
 const MainDiv = styled.div`
   display: flex;
+  justify-content: space-between;
   padding: 16px 0;
   background-color: ${black};
 `
 const Menu = styled.ul`
-  display: flex;
+  display: none;
   list-style: none;
   margin: 0;
+  padding: 0;
+  ${mediaXs} {
+    display: flex;
+  }
   li {
     margin: 0;
   }
