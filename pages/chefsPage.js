@@ -6,20 +6,20 @@ import styled from "styled-components"
 const chefsPage = () => {
   return (
     <Layout>
-      <DivWrapper>
+      <MainWrapper>
         <h1>Choose your chef</h1>
         <ChefsMap />
-      </DivWrapper>
+      </MainWrapper>
     </Layout>
   )
 }
 
 export default chefsPage
 
-const DivWrapper = styled.div`
-  margin: 0 50px;
+const MainWrapper = styled.div`
   h1 {
     display: flex;
     justify-content: center;
+    margin-bottom: 0;
   }
 `

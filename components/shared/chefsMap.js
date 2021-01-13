@@ -1,5 +1,6 @@
 import { Chefs } from "./chefs"
 import styled from "styled-components"
+import { grey } from "../colors"
 
 const ChefsMap = () => {
   const mappedChefs = Chefs.map((typesOfName, i) => {
@@ -14,28 +15,28 @@ const ChefsMap = () => {
     )
   })
 
-  return (
-    <>
-      <MappedDiv>{mappedChefs}</MappedDiv>
-    </>
-  )
+  return <MappedDiv>{mappedChefs}</MappedDiv>
 }
 
 export default ChefsMap
 
 const MainDiv = styled.div`
+  border-radius: 10px;
+  box-shadow: ${grey} 0.2em 0.3em 0.3em 0.3em;
+  margin-bottom: 30px;
   img {
-    width: 300px;
-    height: 300px;
+    width: 315px;
+    height: 315px;
     position: relative;
-    margin-bottom: 0;
     overflow: hidden;
     object-fit: cover;
+    border-radius: 10px 10px 0 0;
   }
 `
 const MappedDiv = styled.div`
-  width: 100%;
+  margin: 30px;
+  max-width: 100%;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
 `
