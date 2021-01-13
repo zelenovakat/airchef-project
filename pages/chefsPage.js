@@ -1,13 +1,25 @@
-import React from "react"
 import Layout from "../components/layout"
-import Image from "next/image"
+import ChefsMap from "../components/shared/chefsMap"
+import styled from "styled-components"
+// import Image from "next/image"
 
-const firstPage = () => {
+const chefsPage = () => {
   return (
     <Layout>
-      <h1>hello</h1>
+      <DivWrapper>
+        <h1>Choose your chef</h1>
+        <ChefsMap />
+      </DivWrapper>
     </Layout>
   )
 }
 
-export default firstPage
+export default chefsPage
+
+const DivWrapper = styled.div`
+  margin: 0 50px;
+  h1 {
+    display: flex;
+    justify-content: center;
+  }
+`
