@@ -7,16 +7,16 @@ const ChefsMap = () => {
   const mappedChefs = Chefs.map((typesOfName, i) => {
     return (
       <MainDiv key={i}>
-        <MainLink href={typesOfName.link}>
-          <a>
+        <Link href={typesOfName.link}>
+          <MainLink>
             <img src={typesOfName.profileImg} alt="" />
             <div>
               <h3>{typesOfName.name}</h3>
               <p>{typesOfName.titleRestaurant}</p>
               <p>{typesOfName.titleFood}</p>
             </div>
-          </a>
-        </MainLink>
+          </MainLink>
+        </Link>
       </MainDiv>
     )
   })
@@ -26,9 +26,13 @@ const ChefsMap = () => {
 
 export default ChefsMap
 
-const MainLink = styled(Link)`
-  a {
-    text-decoration: none;
+const MainLink = styled.a`
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
+  div {
+    margin: 10px;
   }
 `
 

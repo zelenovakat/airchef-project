@@ -60,12 +60,13 @@ const MenuWrapper = styled.div`
   display: flex;
 `
 
-const LogoLink = styled(Link)`
-  a {
-    margin: 0;
-    font-size: 20px;
-    text-decoration: none;
-    color: ${white};
+const LogoLink = styled.a`
+  margin: 0;
+  font-size: 20px;
+  text-decoration: none;
+  color: ${white};
+  &:hover {
+    cursor: pointer;
   }
 `
 const MainDiv = styled.div`
@@ -83,15 +84,12 @@ const Menu = styled.ul`
     display: flex;
   }
 `
-const MenuLink = styled(Link)`
-  a {
-    padding: 16px;
-    font-size: 15px;
-    text-decoration: none;
-    color: ${white};
-    &:hover {
-      cursor: pointer;
-      color: #878787;
-    }
+const MenuLink = styled.a`
+  padding: 16px;
+  font-size: 15px;
+  text-decoration: none;
+  color: ${white};
+  &:hover {
+    cursor: pointer;
   }
 `
