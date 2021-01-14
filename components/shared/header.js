@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { black, white } from "../colors"
 import { mediaSmall, mediaXs } from "../screen"
 import MobileMenu from "./mobileMenu"
+import Link from "next/link"
 
 const Header = () => {
   return (
@@ -9,19 +10,27 @@ const Header = () => {
       <MenuWrapper>
         <Menu>
           <li>
-            <MenuLink href="/chefsPage">Chefs</MenuLink>
+            <Link href="/chefsPage">
+              <MenuLink>Chefs</MenuLink>
+            </Link>
           </li>
           <li>
-            <MenuLink href="">FAQ</MenuLink>
+            <Link href="/">
+              <MenuLink>FAQ</MenuLink>
+            </Link>
           </li>
           <li>
-            <MenuLink href="">!!!</MenuLink>
+            <Link href="/">
+              <MenuLink>!!!</MenuLink>
+            </Link>
           </li>
         </Menu>
       </MenuWrapper>
       <Logo>
         <li>
-          <LogoLink href="/">Airchef</LogoLink>
+          <Link href="/">
+            <LogoLink>Airchef</LogoLink>
+          </Link>
         </li>
       </Logo>
       <MobileMenuDiv>
@@ -46,9 +55,6 @@ const Logo = styled.div`
   justify-content: center;
   list-style: none;
   align-items: center;
-  li {
-    margin: 0;
-  }
 `
 const MenuWrapper = styled.div`
   display: flex;
@@ -73,9 +79,6 @@ const Menu = styled.ul`
   padding: 0;
   ${mediaXs} {
     display: flex;
-  }
-  li {
-    margin: 0;
   }
 `
 const MenuLink = styled.a`
