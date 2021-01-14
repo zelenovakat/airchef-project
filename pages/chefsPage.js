@@ -1,7 +1,6 @@
 import Layout from "../components/layout"
 import ChefsMap from "../components/shared/chefsMap"
 import styled from "styled-components"
-// import Image from "next/image"
 
 const chefsPage = () => {
   return (
