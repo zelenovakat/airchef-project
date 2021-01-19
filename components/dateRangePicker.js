@@ -21,6 +21,7 @@ class DateRangeInput extends Component {
           startDate={this.state.startDate}
           endDate={this.state.endDate}
           numberOfMonths={1}
+          noBorder={true}
           onDatesChange={({ startDate, endDate }) => {
             this.setState({ startDate, endDate })
           }}
