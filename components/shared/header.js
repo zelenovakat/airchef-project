@@ -28,7 +28,7 @@ const Header = () => {
       </MenuWrapper>
       <Logo>
         <li>
-          <Link href="/">
+          <Link href="/firstPage">
             <LogoLink>Airchef</LogoLink>
           </Link>
         </li>

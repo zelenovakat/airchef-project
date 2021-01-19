@@ -1,27 +1,20 @@
-import styled from "styled-components"
+// import styled from "styled-components"
+
 // import Head from "next/head"
 
-import Link from "next/link"
+// import Link from "next/link"
 import Layout from "../components/layout"
-
-const Title = styled.h1`
-  margin: 0;
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
-const Container = styled.div`
-  font-size: 50px;
-`
+import FirstPage from "./firstPage"
 
 const Home = () => {
+  state = {
+    startDate: null,
+    endDate: null,
+    focusedInput: null,
+  }
   return (
     <Layout>
-      <Container>
-        <Title>My page</Title>
-        <Link href="/">
-          <a>Hello, world!</a>
-        </Link>
-      </Container>
+      <FirstPage />
     </Layout>
   )
 }
