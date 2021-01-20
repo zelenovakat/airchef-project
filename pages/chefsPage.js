@@ -1,13 +1,22 @@
-import React from "react"
 import Layout from "../components/layout"
-import Image from "next/image"
+import ChefsMap from "../components/shared/chefsMap"
+import styled from "styled-components"
 
-const firstPage = () => {
+const chefsPage = () => {
   return (
     <Layout>
-      <h1>hello</h1>
+      <div>
+        <ChefsTitle>Choose your chef</ChefsTitle>
+        <ChefsMap />
+      </div>
     </Layout>
   )
 }
 
-export default firstPage
+export default chefsPage
+
+const ChefsTitle = styled.h1`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+`

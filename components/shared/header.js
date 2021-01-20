@@ -65,6 +65,9 @@ const LogoLink = styled.a`
   font-size: 20px;
   text-decoration: none;
   color: ${white};
+  &:hover {
+    cursor: pointer;
+  }
 `
 const MainDiv = styled.div`
   display: flex;
@@ -85,10 +88,8 @@ const MenuLink = styled.a`
   padding: 16px;
   font-size: 15px;
   text-decoration: none;
-  transition: color 0.2s ease-in-out;
   color: ${white};
   &:hover {
     cursor: pointer;
-    color: #878787;
   }
 `
