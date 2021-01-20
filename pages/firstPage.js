@@ -34,7 +34,7 @@ const Wrapper = styled.div`
 const ImgWrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 30px;
   img {
     min-width: 500px;
     max-height: 500px;
@@ -48,7 +48,7 @@ const ImgWrapper = styled.div`
 const DateWrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 30px;
   /* background-color: ${white}; */
 `
 const MainWrapper = styled.div`
