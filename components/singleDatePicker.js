@@ -20,7 +20,6 @@ class SingleDateInput extends Component {
           focused={this.state.focused}
           onFocusChange={({ focused }) => this.setState({ focused })}
           isRequired
-          id="oneDay"
           numberOfMonths={1}
           noBorder={true}
         />

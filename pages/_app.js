@@ -1,25 +1,18 @@
 import { createGlobalStyle, ThemeProvider } from "styled-components"
 export const GlobalStyle = createGlobalStyle`
-
-  body {
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 .CalendarDay__selected_span {
   background: #82e0aa;
   color: white;
-
 }
 .DateInput.DateInput_1{
-width:100px;
+  width:100px;
 }
-
-
-
 .DateRangePicker_picker__directionLeft_2{
-
-    left:-85px !important;
-
+  left:-85px !important;
 }
 }
 
