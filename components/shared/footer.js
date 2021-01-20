@@ -5,7 +5,7 @@ import { black, white } from "../colors"
 const Footer = () => {
   return (
     <Wrapper>
-      <h1>Footer</h1>
+      <ChefsTitle>Footer</ChefsTitle>
     </Wrapper>
   )
 }
@@ -14,7 +14,7 @@ export default Footer
 const Wrapper = styled.div`
   margin: 0;
   background-color: ${black};
-  h1 {
-    color: ${white};
-  }
+`
+const ChefsTitle = styled.h1`
+  color: ${white};
 `

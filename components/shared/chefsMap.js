@@ -4,16 +4,16 @@ import { grey } from "../colors"
 import Link from "next/link"
 
 const ChefsMap = () => {
-  const mappedChefs = Chefs.map((typesOfName, i) => {
+  const mappedChefs = Chefs.map((chef) => {
     return (
-      <MainDiv key={i}>
-        <Link href={typesOfName.link}>
+      <MainDiv key={chef.id}>
+        <Link href={chef.link}>
           <MainLink>
-            <img src={typesOfName.profileImg} alt="" />
+            <Image src={chef.profileImg} alt="A Chef in your kitchen" />
             <div>
-              <h3>{typesOfName.name}</h3>
-              <p>{typesOfName.titleRestaurant}</p>
-              <p>{typesOfName.titleFood}</p>
+              <h3>{chef.name}</h3>
+              <p>{chef.titleRestaurant}</p>
+              <p>{chef.titleFood}</p>
             </div>
           </MainLink>
         </Link>
@@ -35,18 +35,18 @@ const MainLink = styled.a`
     margin: 10px;
   }
 `
+const Image = styled.img`
+  width: 315px;
+  height: 315px;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+`
 
 const MainDiv = styled.div`
   border-radius: 10px;
-  box-shadow: ${grey} 0.2em 0.3em 0.3em 0.3em;
+  box-shadow: ${grey} 2px 3px 3px 3px;
   margin-bottom: 30px;
-  img {
-    width: 315px;
-    height: 315px;
-    overflow: hidden;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
-  }
   ul {
     list-style: none;
     padding: 0;

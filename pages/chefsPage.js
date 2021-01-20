@@ -5,20 +5,18 @@ import styled from "styled-components"
 const chefsPage = () => {
   return (
     <Layout>
-      <MainWrapper>
-        <h1>Choose your chef</h1>
+      <div>
+        <ChefsTitle>Choose your chef</ChefsTitle>
         <ChefsMap />
-      </MainWrapper>
+      </div>
     </Layout>
   )
 }
 
 export default chefsPage
 
-const MainWrapper = styled.div`
-  h1 {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 0;
-  }
+const ChefsTitle = styled.h1`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
 `
