@@ -11,7 +11,8 @@ const RestaurantsMap = () => {
           <MainLink>
             <Image src={restaurant.profileImg} alt="The best restaurants in Italy" />
             <div>
-              <h3>{restaurant.name}</h3>
+              <h3>{restaurant.linkMenu}</h3>
+              <p>{restaurant.name}</p>
               <p>{restaurant.titleFood}</p>
             </div>
           </MainLink>
