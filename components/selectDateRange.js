@@ -26,12 +26,12 @@ const BattonDate = () => {
         <ChefsTitle>Book your chef</ChefsTitle>
         <GlobalStyle />
         <WrapperClickedDay>
-          <div>
+          <CheckboxWrapper>
             <input type="radio" name="checkBox" value="oneDay" id="radio1" onClick={handleOneDay} />
-            <label for="radio1">One day</label>
+            <label>One day</label>
             {onClickedOneDay && <SingleDateInput />}
-          </div>
-          <div>
+          </CheckboxWrapper>
+          <CheckboxWrapper>
             <input
               type="radio"
               name="checkBox"
@@ -39,9 +39,9 @@ const BattonDate = () => {
               id="radio2"
               onClick={handleOneWeek}
             />
-            <label for="radio2">One week</label>
+            <label>One week</label>
             {onClickedOneWeek && <DateRangeInput />}
-          </div>
+          </CheckboxWrapper>
         </WrapperClickedDay>
         <WrapperButton>
           <Button>Find a Chef</Button>
@@ -62,12 +62,9 @@ const Wrapper = styled.div`
 `
 const WrapperClickedDay = styled.div`
   display: flex;
-
   label {
     color: ${black};
     margin: 5px;
-  }
-  ${mediaXs} {
   }
 `
 const MainWrapper = styled.div`
@@ -76,7 +73,13 @@ const MainWrapper = styled.div`
   background-color: ${white};
   width: 380px;
   border-radius: 15px;
+  ${mediaXs} {
+    border-radius: 0px;
+  }
 `
 const WrapperButton = styled.div`
   margin-top: 380px;
+`
+const CheckboxWrapper = styled.div`
+  margin: 5px;
 `

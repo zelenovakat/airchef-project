@@ -1,6 +1,5 @@
 import { Component } from "react"
 import "react-dates/initialize"
-import styled from "styled-components"
 import { SingleDatePicker } from "react-dates"
 import "react-dates/lib/css/_datepicker.css"
 
@@ -13,20 +12,24 @@ class SingleDateInput extends Component {
 
   render() {
     return (
-      <MainWrapper>
+      <div>
         <SingleDatePicker
           date={this.state.date}
           onDateChange={(date) => this.setState({ date })}
           focused={this.state.focused}
           onFocusChange={({ focused }) => this.setState({ focused })}
-          isRequired
           numberOfMonths={1}
           noBorder={true}
+          small="true"
         />
-      </MainWrapper>
+      </div>
     )
   }
 }
 
 export default SingleDateInput
-const MainWrapper = styled.div``
+
+// onFocusChange(focusedInput) {
+//   if (!focusedInput) return;
+//   this.setState({ focusedInput });
+// }
