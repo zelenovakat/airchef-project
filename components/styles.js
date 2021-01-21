@@ -9,3 +9,8 @@ export const Button = styled.button`
   border-radius: 10px;
   padding: 10px;
 `
+export const ChefsTitle = styled.h1`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+`

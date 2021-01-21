@@ -4,8 +4,9 @@ import DateRangeInput from "../components/dateRangePicker"
 import styled from "styled-components"
 import { black, white } from "../components/colors"
 import { GlobalStyle } from "../pages/_app"
-import { Button } from "../components/styles"
+import { Button, ChefsTitle } from "../components/styles"
 import { mediaXs } from "../components/screen"
+
 const BattonDate = () => {
   const [onClickedOneDay, setClickedOneDay] = useState(false)
   const [onClickedOneWeek, setClickedOneWeek] = useState(false)
@@ -22,18 +23,25 @@ const BattonDate = () => {
   return (
     <MainWrapper>
       <Wrapper>
-        <h1>Book your chef</h1>
+        <ChefsTitle>Book your chef</ChefsTitle>
         <GlobalStyle />
         <WrapperClickedDay>
-          <label>
-            <input type="radio" id="radio1" onClick={handleOneDay} /> One day
+          <div>
+            <input type="radio" name="checkBox" value="oneDay" id="radio1" onClick={handleOneDay} />
+            <label for="radio1">One day</label>
             {onClickedOneDay && <SingleDateInput />}
-          </label>
-
-          <label>
-            <input type="radio" id="radio2" onClick={handleOneWeek} /> One week
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="checkBox"
+              value="oneWeek"
+              id="radio2"
+              onClick={handleOneWeek}
+            />
+            <label for="radio2">One week</label>
             {onClickedOneWeek && <DateRangeInput />}
-          </label>
+          </div>
         </WrapperClickedDay>
         <WrapperButton>
           <Button>Find a Chef</Button>
@@ -44,8 +52,13 @@ const BattonDate = () => {
 }
 
 export default BattonDate
+
 const Wrapper = styled.div`
   margin: 20px;
+  h1 {
+    justify-content: left;
+    margin: 10px;
+  }
 `
 const WrapperClickedDay = styled.div`
   display: flex;
