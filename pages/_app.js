@@ -12,7 +12,10 @@ body {
   width:100px;
 }
 .DateRangePicker_picker__directionLeft_2{
-  left:-85px !important;
+  left:-105px !important;
+}
+.SingleDatePicker_picker_1{
+  left: 5px !important;
 }
 
 }

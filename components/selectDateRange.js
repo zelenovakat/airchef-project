@@ -10,12 +10,14 @@ import { mediaXs } from "../components/screen"
 const BattonDate = () => {
   const [onClickedOneDay, setClickedOneDay] = useState(true)
   const [onClickedOneWeek, setClickedOneWeek] = useState(true)
+
   const handleOneDay = () => {
     setClickedOneDay(onClickedOneDay)
   }
   const handleOneWeek = () => {
     setClickedOneWeek(onClickedOneWeek)
   }
+
   return (
     <MainWrapper>
       <Wrapper>
@@ -30,7 +32,6 @@ const BattonDate = () => {
               id="radioFirst"
               onChange={handleOneDay}
             />
-
             <label>One day</label>
             {onClickedOneDay && <SingleDateInput />}
           </CheckboxWrapper>
