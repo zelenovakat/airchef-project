@@ -8,18 +8,14 @@ import { Button, ChefsTitle } from "../components/styles"
 import { mediaXs } from "../components/screen"
 
 const BattonDate = () => {
-  const [onClickedOneDay, setClickedOneDay] = useState(false)
-  const [onClickedOneWeek, setClickedOneWeek] = useState(false)
-
+  const [onClickedOneDay, setClickedOneDay] = useState(true)
+  const [onClickedOneWeek, setClickedOneWeek] = useState(true)
   const handleOneDay = () => {
-    setClickedOneDay(!onClickedOneDay)
-    setClickedOneWeek(onClickedOneDay)
+    setClickedOneDay(onClickedOneDay)
   }
   const handleOneWeek = () => {
-    setClickedOneWeek(!onClickedOneWeek)
-    setClickedOneDay(onClickedOneWeek)
+    setClickedOneWeek(onClickedOneWeek)
   }
-
   return (
     <MainWrapper>
       <Wrapper>
@@ -27,7 +23,14 @@ const BattonDate = () => {
         <GlobalStyle />
         <WrapperClickedDay>
           <CheckboxWrapper>
-            <input type="radio" name="checkBox" value="oneDay" id="radio1" onClick={handleOneDay} />
+            <input
+              type="radio"
+              name="checkBox"
+              value="oneDay"
+              id="radioFirst"
+              onChange={handleOneDay}
+            />
+
             <label>One day</label>
             {onClickedOneDay && <SingleDateInput />}
           </CheckboxWrapper>
@@ -36,8 +39,8 @@ const BattonDate = () => {
               type="radio"
               name="checkBox"
               value="oneWeek"
-              id="radio2"
-              onClick={handleOneWeek}
+              id="radioSecond"
+              onChange={handleOneWeek}
             />
             <label>One week</label>
             {onClickedOneWeek && <DateRangeInput />}

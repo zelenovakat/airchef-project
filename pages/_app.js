@@ -14,6 +14,7 @@ body {
 .DateRangePicker_picker__directionLeft_2{
   left:-85px !important;
 }
+
 }
 
 `

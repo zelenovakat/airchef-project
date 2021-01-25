@@ -8,6 +8,15 @@ class SingleDateInput extends Component {
     startDate: null,
     endDate: null,
     focusedInput: null,
+    focused: true,
+  }
+
+  onFocusChange = (focused) => {
+    if (!focused) {
+      return
+    }
+
+    this.setState({ focused })
   }
 
   render() {
@@ -20,7 +29,7 @@ class SingleDateInput extends Component {
           onFocusChange={({ focused }) => this.setState({ focused })}
           numberOfMonths={1}
           noBorder={true}
-          small="true"
+          small={true}
         />
       </div>
     )
