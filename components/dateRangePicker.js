@@ -11,13 +11,6 @@ class DateRangeInput extends Component {
     focusedInput: null,
   }
 
-  onFocusChange = (focusedInput) => {
-    if (!focusedInput) {
-      return
-    }
-    this.setState({ focusedInput })
-  }
-
   render() {
     return (
       <MainWrapper>
