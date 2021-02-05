@@ -7,7 +7,11 @@ const ChefsMap = () => {
   const mappedChefs = Chefs.map((chef) => {
     return (
       <MainDiv key={chef.id}>
-        <Link href={chef.link}>
+        <Link
+          href={{
+            pathname: "/[Chefs]",
+            query: { Chefs: chef.pathname },
+          }}>
           <MainLink>
             <Image src={chef.profileImg} alt="A Chef in your kitchen" />
             <div>

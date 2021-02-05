@@ -11,7 +11,7 @@ export const Chefs = [
     titleRestaurant: "Restaurant: Planet beat",
     titleFood: "Food: European",
     profileImg: davidGreenwood,
-    link: "/",
+    pathname: "davidGreenwood",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const Chefs = [
     titleRestaurant: "Restaurant: Trattoria italiana",
     titleFood: "Food: Asian,Indian",
     profileImg: febrianZakari,
-    link: "/",
+    pathname: "febrianZakari",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const Chefs = [
     titleRestaurant: "Restaurant: Trattoria italiana",
     titleFood: "Food: Indian",
     profileImg: jeffSiepman,
-    link: "/",
+    pathname: "jeffSiepman",
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ export const Chefs = [
     titleRestaurant: "Restaurant: Paella's màs",
     titleFood: "Food: Indian,European",
     profileImg: mario,
-    link: "/",
+    pathname: "Mario",
   },
   {
     id: 5,
@@ -43,6 +43,6 @@ export const Chefs = [
     titleRestaurant: "Restaurant: Planet beat",
     titleFood: "Food: European",
     profileImg: vinceFleming,
-    link: "/",
+    pathname: "vinceFleming",
   },
 ]
