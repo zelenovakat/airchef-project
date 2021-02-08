@@ -15,7 +15,7 @@ export const Button = styled.button`
 `
 export const ChefsTitle = styled.h1`
   display: flex;
-  justify-content: center;
+  justify-content: left;
   margin-bottom: 0;
 `
 export const DescriptionWrapper = styled.div`

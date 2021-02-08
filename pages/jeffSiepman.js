@@ -5,7 +5,7 @@ import jeffSiepman from "../components/shared/images/jeffSiepman.jpg"
 import foodPic from "../components/shared/images/foodPic.jpg"
 import foodPic2 from "../components/shared/images/foodPic2.jpg"
 import foodPic3 from "../components/shared/images/foodPic3.jpg"
-import mario from "../components/shared/images/mario.jpg"
+import restaurantDish2 from "../components/shared/images/restaurantDish2.jpg"
 import { ChefsTitle } from "../components/styles"
 import { DescriptionWrapper } from "../components/styles"
 import { Image } from "../components/styles"
@@ -42,7 +42,7 @@ const JeffSiepman = () => {
           <ImageFood src={foodPic} alt="" />
           <ImageFood src={foodPic2} alt="" />
           <ImageFood src={foodPic3} alt="" />
-          <ImageFood src={mario} alt="" />
+          <ImageFood src={restaurantDish2} alt="" />
         </SectionCenter>
         <SectionRight>
           <h2>Book Jeff Siepman now</h2>
