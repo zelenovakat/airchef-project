@@ -2,7 +2,6 @@ import { Component } from "react"
 import "react-dates/initialize"
 import "react-dates/lib/css/_datepicker.css"
 import { DateRangePicker } from "react-dates"
-import styled from "styled-components"
 
 class DateRangeInput extends Component {
   state = {
@@ -13,7 +12,7 @@ class DateRangeInput extends Component {
 
   render() {
     return (
-      <MainWrapper>
+      <div>
         <DateRangePicker
           transitionDuration={0}
           startDateId="startDate"
@@ -31,11 +30,9 @@ class DateRangeInput extends Component {
             this.setState({ focusedInput })
           }}
         />
-      </MainWrapper>
+      </div>
     )
   }
 }
 
 export default DateRangeInput
-
-const MainWrapper = styled.div``
