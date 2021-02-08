@@ -5,7 +5,6 @@ import mario from "../components/shared/images/mario.jpg"
 import foodPic from "../components/shared/images/foodPic.jpg"
 import foodPic2 from "../components/shared/images/foodPic2.jpg"
 import foodPic3 from "../components/shared/images/foodPic3.jpg"
-import mario from "../components/shared/images/mario.jpg"
 import { ChefsTitle } from "../components/styles"
 import { DescriptionWrapper } from "../components/styles"
 import { Image } from "../components/styles"
@@ -14,7 +13,7 @@ import { SectionCenter } from "../components/styles"
 import { MainConteiner } from "../components/styles"
 import { ImageFood } from "../components/styles"
 import { SectionRight } from "../components/styles"
-const Mario = () => {
+const MarioPage = () => {
   return (
     <Layout>
       <MainConteiner>
@@ -53,4 +52,4 @@ const Mario = () => {
   )
 }
 
-export default Mario
+export default MarioPage

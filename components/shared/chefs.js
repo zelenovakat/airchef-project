@@ -35,7 +35,7 @@ export const Chefs = [
     titleRestaurant: "Restaurant: Paella's màs",
     titleFood: "Food: Indian,European",
     profileImg: mario,
-    pathname: "Mario",
+    pathname: "marioPage",
   },
   {
     id: 5,
