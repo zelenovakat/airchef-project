@@ -49,9 +49,7 @@ const BookChef = () => {
             {onClickedOneWeek && <DateRangeInput />}
           </CheckboxWrapper>
         </WrapperClickedDay>
-        <WrapperButton>
-          <Button>Book a Chef</Button>
-        </WrapperButton>
+        <Button>Book a Chef</Button>
       </Wrapper>
     </MainWrapper>
   )
@@ -75,10 +73,7 @@ const MainWrapper = styled.div`
     margin: 0px;
   }
 `
-const WrapperButton = styled.div`
-  margin-top: 365px;
-  margin-bottom: 95px;
-`
+
 const CheckboxWrapper = styled.div`
   &:hover {
     cursor: pointer;

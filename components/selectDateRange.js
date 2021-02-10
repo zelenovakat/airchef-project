@@ -1,6 +1,6 @@
 import { useState } from "react"
-import SingleDateInput from "../components/singleDatePicker"
-import DateRangeInput from "../components/dateRangePicker"
+import SinglDateRangePicker from "../components/singleDatePicker"
+import DateRangePicker from "../components/dateRangePicker"
 import styled from "styled-components"
 import { black, white } from "../components/colors"
 import { GlobalStyle } from "../pages/_app"
@@ -9,13 +9,13 @@ import { mediaXs } from "../components/screen"
 
 const BattonDate = () => {
   const [onClickedOneDay, setClickedOneDay] = useState(true)
-  const [onClickedOneWeek, setClickedOneWeek] = useState(true)
+  const [onClickedOneWeek, setClickedOneWeek] = useState(false)
 
   const handleOneDay = () => {
-    setClickedOneDay(onClickedOneDay)
+    setClickedOneDay(!onClickedOneDay)
   }
   const handleOneWeek = () => {
-    setClickedOneWeek(onClickedOneWeek)
+    setClickedOneWeek(!onClickedOneWeek)
   }
 
   return (
@@ -33,7 +33,7 @@ const BattonDate = () => {
               onChange={handleOneDay}
             />
             <label>One day</label>
-            {onClickedOneDay && <SingleDateInput />}
+            {onClickedOneDay && <SinglDateRangePicker />}
           </CheckboxWrapper>
           <CheckboxWrapper>
             <input
@@ -44,12 +44,11 @@ const BattonDate = () => {
               onChange={handleOneWeek}
             />
             <label>One week</label>
-            {onClickedOneWeek && <DateRangeInput />}
+            {onClickedOneWeek && <DateRangePicker />}
           </CheckboxWrapper>
         </WrapperClickedDay>
-        <WrapperButton>
-          <Button>Find a Chef</Button>
-        </WrapperButton>
+
+        <Button>Find a Chef</Button>
       </Wrapper>
     </MainWrapper>
   )
@@ -81,9 +80,7 @@ const MainWrapper = styled.div`
     border-radius: 0px;
   }
 `
-const WrapperButton = styled.div`
-  margin-top: 380px;
-`
+
 const CheckboxWrapper = styled.div`
   margin: 5px;
 `

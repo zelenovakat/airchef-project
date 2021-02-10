@@ -1,44 +1,48 @@
+import React from "react"
 import { Component } from "react"
-import "react-dates/initialize"
-import { SingleDatePicker } from "react-dates"
+import moment from "moment"
+import { DayPickerSingleDateController } from "react-dates"
 import "react-dates/lib/css/_datepicker.css"
+import "react-dates/initialize"
 
-class SingleDateInput extends Component {
+class SinglDateRangePicker extends Component {
   state = {
-    startDate: null,
-    endDate: null,
+    startDate: moment(),
+    endDate: moment(),
     focusedInput: null,
-    focused: true,
+    focused: null,
+    date: moment(),
   }
 
-  onFocusChange = (focused) => {
-    if (!focused) {
-      return
-    }
+  onDateChange = (date) => {
+    this.setState({ date })
+  }
 
-    this.setState({ focused })
+  onFocusChange = () => {
+    // Force the focused states to always be truthy so that date is always selectable
+    this.setState({ focused: true })
+  }
+
+  focusedInput = (focusedInput) => {
+    console.log(`focusedInput`, focusedInput)
+    this.setState({ focusedInput })
   }
 
   render() {
+    const { focused, date } = this.state
     return (
       <div>
-        <SingleDatePicker
-          date={this.state.date}
-          onDateChange={(date) => this.setState({ date })}
-          focused={this.state.focused}
-          onFocusChange={({ focused }) => this.setState({ focused })}
-          numberOfMonths={1}
-          noBorder={true}
-          small={true}
-        />
+        <form>
+          <DayPickerSingleDateController
+            onDateChange={this.onDateChange}
+            onFocusChange={this.onFocusChange}
+            focused={focused}
+            date={date}
+          />
+        </form>
       </div>
     )
   }
 }
 
-export default SingleDateInput
-
-// onFocusChange(focusedInput) {
-//   if (!focusedInput) return;
-//   this.setState({ focusedInput });
-// }
+export default SinglDateRangePicker

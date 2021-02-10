@@ -13,7 +13,7 @@ import { SectionCenter } from "../components/styles"
 import { MainConteiner } from "../components/styles"
 import { ImageFood } from "../components/styles"
 import { SectionRight } from "../components/styles"
-import styled from "styled-components"
+import { ChefsTitle } from "../components/styles"
 const VinceFleming = () => {
   return (
     <Layout>

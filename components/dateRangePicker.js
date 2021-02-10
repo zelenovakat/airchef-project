@@ -1,38 +1,43 @@
 import { Component } from "react"
 import "react-dates/initialize"
 import "react-dates/lib/css/_datepicker.css"
-import { DateRangePicker } from "react-dates"
+import { DayPickerRangeController } from "react-dates"
 
-class DateRangeInput extends Component {
+class DateRangePicker extends Component {
   state = {
     startDate: null,
     endDate: null,
-    focusedInput: null,
+    focusedInput: "startDate",
+  }
+
+  handleDateChange = ({ startDate, endDate }) => {
+    this.setState({ startDate, endDate })
+  }
+
+  handleFocusChange = (focusedInput) => {
+    this.setState({ focusedInput: focusedInput || "startDate" })
+  }
+
+  dayClick = (date) => {
+    console.log(date)
   }
 
   render() {
     return (
       <div>
-        <DateRangePicker
-          transitionDuration={0}
-          startDateId="startDate"
-          endDateId="endDate"
-          startDate={this.state.startDate}
-          endDate={this.state.endDate}
-          numberOfMonths={1}
-          noBorder={true}
-          small={true}
-          onDatesChange={({ startDate, endDate }) => {
-            this.setState({ startDate, endDate })
-          }}
-          focusedInput={this.state.focusedInput}
-          onFocusChange={(focusedInput) => {
-            this.setState({ focusedInput })
-          }}
-        />
+        <form>
+          <DayPickerRangeController
+            onDatesChange={this.handleDateChange}
+            focusedInput={this.state.focusedInput}
+            onFocusChange={this.handleFocusChange}
+            startDate={this.state.startDate}
+            endDate={this.state.endDate}
+            minimumNights={1}
+          />
+        </form>
       </div>
     )
   }
 }
 
-export default DateRangeInput
+export default DateRangePicker

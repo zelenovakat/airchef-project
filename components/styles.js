@@ -34,6 +34,7 @@ export const Image = styled.img`
   overflow: hidden;
   object-fit: cover;
   margin: 5px;
+  height: 653px;
   ${mediaXs} {
     width: 100%;
     margin: 0;
@@ -68,7 +69,7 @@ export const MainConteiner = styled.div`
   }
 `
 export const ImageFood = styled.img`
-  width: 207px;
+  width: 206px;
   height: 320px;
   overflow: hidden;
   object-fit: cover;
