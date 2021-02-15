@@ -29,7 +29,6 @@ const BattonDate = () => {
             />
             <label>One day</label>
           </CheckboxWrapper>
-
           <CheckboxWrapper>
             <input
               type="radio"
@@ -62,8 +61,11 @@ const BattonDate = () => {
 }
 
 export default BattonDate
-const CalendarWrapper = styled.div``
+const CalendarWrapper = styled.div`
+  margin: 10px;
+`
 const CalendarWrapperWeek = styled.div`
+  margin: 10px;
   position: absolute;
   top: 106px;
 `
@@ -73,6 +75,9 @@ const Wrapper = styled.div`
   h1 {
     justify-content: left;
     margin: 10px;
+  }
+  ${mediaXs} {
+    height: 470px;
   }
 `
 const WrapperClickedDay = styled.div`
