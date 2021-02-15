@@ -19,28 +19,24 @@ class SinglDateRangePicker extends Component {
   }
 
   onFocusChange = () => {
-    // Force the focused states to always be truthy so that date is always selectable
     this.setState({ focused: true })
   }
 
   focusedInput = (focusedInput) => {
-    console.log(`focusedInput`, focusedInput)
     this.setState({ focusedInput })
   }
 
   render() {
     const { focused, date } = this.state
     return (
-      <div>
-        <form>
-          <DayPickerSingleDateController
-            onDateChange={this.onDateChange}
-            onFocusChange={this.onFocusChange}
-            focused={focused}
-            date={date}
-          />
-        </form>
-      </div>
+      <form>
+        <DayPickerSingleDateController
+          onDateChange={this.onDateChange}
+          onFocusChange={this.onFocusChange}
+          focused={focused}
+          date={date}
+        />
+      </form>
     )
   }
 }

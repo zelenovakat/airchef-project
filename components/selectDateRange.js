@@ -8,14 +8,9 @@ import { Button, ChefsTitle } from "../components/styles"
 import { mediaXs } from "../components/screen"
 
 const BattonDate = () => {
-  const [onClickedOneDay, setClickedOneDay] = useState(true)
-  const [onClickedOneWeek, setClickedOneWeek] = useState(false)
-
+  const [onClickedOneDay, setClickedOneDay] = useState(false)
   const handleOneDay = () => {
     setClickedOneDay(!onClickedOneDay)
-  }
-  const handleOneWeek = () => {
-    setClickedOneWeek(!onClickedOneWeek)
   }
 
   return (
@@ -33,28 +28,45 @@ const BattonDate = () => {
               onChange={handleOneDay}
             />
             <label>One day</label>
-            {onClickedOneDay && <SinglDateRangePicker />}
           </CheckboxWrapper>
+
           <CheckboxWrapper>
             <input
               type="radio"
               name="checkBox"
               value="oneWeek"
+<<<<<<< HEAD
               id="radioSecond"
               onChange={handleOneWeek}
+=======
+              id="radio2"
+              onClick={handleOneDay}
+>>>>>>> working calendar
             />
             <label>One week</label>
-            {onClickedOneWeek && <DateRangePicker />}
           </CheckboxWrapper>
         </WrapperClickedDay>
-
-        <Button>Find a Chef</Button>
+        {onClickedOneDay ? (
+          <CalendarWrapper>
+            <SinglDateRangePicker />
+          </CalendarWrapper>
+        ) : (
+          <CalendarWrapperWeek>
+            <DateRangePicker />
+          </CalendarWrapperWeek>
+        )}
       </Wrapper>
+      <Button>Find a Chef</Button>
     </MainWrapper>
   )
 }
 
 export default BattonDate
+const CalendarWrapper = styled.div``
+const CalendarWrapperWeek = styled.div`
+  position: absolute;
+  top: 106px;
+`
 
 const Wrapper = styled.div`
   margin: 20px;
@@ -76,6 +88,7 @@ const MainWrapper = styled.div`
   background-color: ${white};
   width: 380px;
   border-radius: 15px;
+  position: relative;
   ${mediaXs} {
     border-radius: 0px;
   }

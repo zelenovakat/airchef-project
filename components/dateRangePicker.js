@@ -24,18 +24,16 @@ class DateRangePicker extends Component {
 
   render() {
     return (
-      <div>
-        <form>
-          <DayPickerRangeController
-            onDatesChange={this.handleDateChange}
-            focusedInput={this.state.focusedInput}
-            onFocusChange={this.handleFocusChange}
-            startDate={this.state.startDate}
-            endDate={this.state.endDate}
-            minimumNights={1}
-          />
-        </form>
-      </div>
+      <form>
+        <DayPickerRangeController
+          onDatesChange={this.handleDateChange}
+          focusedInput={this.state.focusedInput}
+          onFocusChange={this.handleFocusChange}
+          startDate={this.state.startDate}
+          endDate={this.state.endDate}
+          minimumNights={1}
+        />
+      </form>
     )
   }
 }

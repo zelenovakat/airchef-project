@@ -9,6 +9,11 @@ export const Button = styled.button`
   border: none;
   border-radius: 10px;
   padding: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 20px;
+
   &:focus {
     outline: none;
   }
@@ -80,7 +85,7 @@ export const SectionRight = styled.div`
   border-radius: 5px;
   box-shadow: ${grey} 2px 3px 3px 3px;
   margin: 10px 5px;
-  height: 100%;
+  height: 653px;
   ${mediaXs} {
     width: 100%;
     box-shadow: none;
