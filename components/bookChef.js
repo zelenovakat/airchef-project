@@ -5,13 +5,21 @@ import styled from "styled-components"
 import { GlobalStyle } from "../pages/_app"
 
 import { mediaXs } from "./screen"
-import { black, white } from "../components/colors"
+import { black, white, grey, green } from "../components/colors"
 import { Button } from "../components/styles"
 
 const BookChef = () => {
-  const [onClickedOneDay, setClickedOneDay] = useState(false)
-  const handleOneDay = () => {
-    setClickedOneDay(!onClickedOneDay)
+  const [onClickedDay, setClickedDay] = useState(false)
+  const [onClickedWeek, setClickedWeek] = useState(false)
+  const [isShow, setIsShow] = useState(false)
+  const handleClickDay = () => {
+    setClickedDay(!onClickedDay)
+    setIsShow(isShow === true)
+  }
+
+  const handleClickWeek = () => {
+    setClickedWeek(!onClickedWeek)
+    setIsShow(isShow === false)
   }
 
   return (
@@ -20,10 +28,18 @@ const BookChef = () => {
         <GlobalStyle />
         <WrapperClickedDay>
           <CheckboxWrapper>
-            <input type="radio" name="checkBox" value="oneDay" id="radio1" onClick={handleOneDay} />
-            <label>One day</label>
-            <br />
-            <PriceWrapper>85 EUR</PriceWrapper>
+            <input
+              type="radio"
+              name="checkBox"
+              value="oneDay"
+              id="radio1"
+              onClick={handleClickDay}
+            />
+            <div>
+              <label>One day</label>
+              <br />
+              <PriceWrapper>85 EUR</PriceWrapper>
+            </div>
           </CheckboxWrapper>
 
           <CheckboxWrapper>
@@ -32,14 +48,16 @@ const BookChef = () => {
               name="checkBox"
               value="oneWeek"
               id="radio2"
-              onClick={handleOneDay}
+              onClick={handleClickWeek}
             />
-            <label>One week</label>
-            <br />
-            <PriceWrapper>200 EUR</PriceWrapper>
+            <div>
+              <label>One week</label>
+              <br />
+              <PriceWrapper>200 EUR</PriceWrapper>
+            </div>
           </CheckboxWrapper>
         </WrapperClickedDay>
-        {onClickedOneDay ? (
+        {isShow ? (
           <CalendarWrapper>
             <SinglDateRangePicker />
           </CalendarWrapper>
@@ -49,23 +67,24 @@ const BookChef = () => {
           </CalendarWrapperWeek>
         )}
       </Wrapper>
-      <Button>Find a Chef</Button>
+      <Button>BOOK CHEF</Button>
     </MainWrapper>
   )
 }
 
 export default BookChef
-const CalendarWrapper = styled.div``
-const CalendarWrapperWeek = styled.div`
-  position: absolute;
-  top: 106px;
+
+const CalendarWrapper = styled.div`
+  margin-top: 20px;
 `
-
-// left: 75px;
-//     bottom: 75px;
-
+const CalendarWrapperWeek = styled.div`
+  margin-top: 20px;
+  position: absolute;
+  top: 75px;
+`
 const Wrapper = styled.div`
   margin: 15px;
+  height: 505px;
   h1 {
     justify-content: left;
     margin: 10px;
@@ -73,6 +92,7 @@ const Wrapper = styled.div`
 `
 const WrapperClickedDay = styled.div`
   display: flex;
+  justify-content: space-around;
   label {
     color: ${black};
     margin: 5px;
@@ -85,16 +105,20 @@ const MainWrapper = styled.div`
   border-radius: 15px;
   position: relative;
   width: 100%;
-  height: 585px;
+  height: 480px;
   ${mediaXs} {
     border-radius: 0px;
   }
 `
 
 const CheckboxWrapper = styled.div`
-  margin: 5px;
+  border: 2px solid ${grey};
+  padding: 10px;
+  display: flex;
+  place-items: center;
   &:hover {
     cursor: pointer;
+    border-color: ${green};
   }
 `
 const PriceWrapper = styled.label`

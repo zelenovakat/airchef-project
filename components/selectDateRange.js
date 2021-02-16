@@ -8,11 +8,19 @@ import { Button, ChefsTitle } from "../components/styles"
 import { mediaXs } from "../components/screen"
 
 const BattonDate = () => {
-  const [onClickedOneDay, setClickedOneDay] = useState(false)
-  const handleOneDay = () => {
-    setClickedOneDay(!onClickedOneDay)
+  const [onClickedDay, setClickedDay] = useState(false)
+  const [onClickedWeek, setClickedWeek] = useState(false)
+  const [isShow, setIsShow] = useState(false)
+
+  const handleClickDay = () => {
+    setClickedDay(!onClickedDay)
+    setIsShow(isShow === true)
   }
 
+  const handleClickWeek = () => {
+    setClickedWeek(!onClickedWeek)
+    setIsShow(isShow === false)
+  }
   return (
     <MainWrapper>
       <Wrapper>
@@ -24,8 +32,13 @@ const BattonDate = () => {
               type="radio"
               name="checkBox"
               value="oneDay"
+<<<<<<< HEAD
               id="radioFirst"
               onChange={handleOneDay}
+=======
+              id="radio1"
+              onClick={handleClickDay}
+>>>>>>> some changes to the calendar view
             />
             <label>One day</label>
           </CheckboxWrapper>
@@ -39,23 +52,27 @@ const BattonDate = () => {
               onChange={handleOneWeek}
 =======
               id="radio2"
+<<<<<<< HEAD
               onClick={handleOneDay}
 >>>>>>> working calendar
+=======
+              onClick={handleClickWeek}
+>>>>>>> some changes to the calendar view
             />
             <label>One week</label>
           </CheckboxWrapper>
         </WrapperClickedDay>
-        {onClickedOneDay ? (
+        {isShow ? (
           <CalendarWrapper>
-            <SinglDateRangePicker />
+            <DateRangePicker />
           </CalendarWrapper>
         ) : (
           <CalendarWrapperWeek>
-            <DateRangePicker />
+            <SinglDateRangePicker />
           </CalendarWrapperWeek>
         )}
       </Wrapper>
-      <Button>Find a Chef</Button>
+      <Button>FIND A CHEF</Button>
     </MainWrapper>
   )
 }
@@ -88,6 +105,7 @@ const WrapperClickedDay = styled.div`
   }
 `
 const MainWrapper = styled.div`
+  height: 505px;
   display: flex;
   flex-direction: column;
   background-color: ${white};

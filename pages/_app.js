@@ -22,10 +22,10 @@ body {
   ${mediaXs} {
   left:-10px !important}
 }
-
+.CalendarMonth.CalendarMonth_1{
+padding: 0px 25px;
 }
-
-
+}
 `
 
 const theme = {

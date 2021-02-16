@@ -4,7 +4,7 @@ import { mediaXs } from "../components/screen"
 
 export const Button = styled.button`
   background-color: ${green};
-  font-size: 30px;
+  font-size: 25px;
   color: ${white};
   border: none;
   border-radius: 10px;
