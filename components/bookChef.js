@@ -97,6 +97,9 @@ const WrapperClickedDay = styled.div`
     color: ${black};
     margin: 5px;
   }
+  ${mediaXs} {
+    justify-content: left;
+  }
 `
 const MainWrapper = styled.div`
   display: flex;
@@ -119,6 +122,9 @@ const CheckboxWrapper = styled.div`
   &:hover {
     cursor: pointer;
     border-color: ${green};
+  }
+  ${mediaXs} {
+    margin-right: 10px;
   }
 `
 const PriceWrapper = styled.label`

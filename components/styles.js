@@ -70,7 +70,6 @@ export const MainConteiner = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    text-align: center;
   }
 `
 export const ImageFood = styled.img`
@@ -90,7 +89,6 @@ export const SectionRight = styled.div`
     width: 100%;
     box-shadow: none;
     margin: 0px;
-    text-align: center;
   }
   h2 {
     margin: 20px 15px;
