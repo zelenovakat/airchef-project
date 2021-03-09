@@ -17,4 +17,5 @@ const Wrapper = styled.div`
 `
 const ChefsTitle = styled.h1`
   color: ${white};
+  margin: 0;
 `

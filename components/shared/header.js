@@ -28,7 +28,7 @@ const Header = () => {
       </MenuWrapper>
       <Logo>
         <li>
-          <Link href="/">
+          <Link href="/firstPage">
             <LogoLink>Airchef</LogoLink>
           </Link>
         </li>
@@ -76,12 +76,12 @@ const MainDiv = styled.div`
   background-color: ${black};
 `
 const Menu = styled.ul`
-  display: none;
+  display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
   ${mediaXs} {
-    display: flex;
+    display: none;
   }
 `
 const MenuLink = styled.a`

@@ -4,36 +4,48 @@ import DateRangeInput from "../components/dateRangePicker"
 import styled from "styled-components"
 import { black, white } from "../components/colors"
 import { GlobalStyle } from "../pages/_app"
-import { Button } from "../components/styles"
+import { Button, ChefsTitle } from "../components/styles"
 import { mediaXs } from "../components/screen"
+
 const BattonDate = () => {
-  const [onClickedOneDay, setClickedOneDay] = useState(false)
-  const [onClickedOneWeek, setClickedOneWeek] = useState(false)
+  const [onClickedOneDay, setClickedOneDay] = useState(true)
+  const [onClickedOneWeek, setClickedOneWeek] = useState(true)
 
   const handleOneDay = () => {
-    setClickedOneDay(!onClickedOneDay)
-    setClickedOneWeek(onClickedOneDay)
+    setClickedOneDay(onClickedOneDay)
   }
   const handleOneWeek = () => {
-    setClickedOneWeek(!onClickedOneWeek)
-    setClickedOneDay(onClickedOneWeek)
+    setClickedOneWeek(onClickedOneWeek)
   }
 
   return (
     <MainWrapper>
       <Wrapper>
-        <h1>Book your chef</h1>
+        <ChefsTitle>Book your chef</ChefsTitle>
         <GlobalStyle />
         <WrapperClickedDay>
-          <label>
-            <input type="radio" id="radio1" onClick={handleOneDay} /> One day
+          <CheckboxWrapper>
+            <input
+              type="radio"
+              name="checkBox"
+              value="oneDay"
+              id="radioFirst"
+              onChange={handleOneDay}
+            />
+            <label>One day</label>
             {onClickedOneDay && <SingleDateInput />}
-          </label>
-
-          <label>
-            <input type="radio" id="radio2" onClick={handleOneWeek} /> One week
+          </CheckboxWrapper>
+          <CheckboxWrapper>
+            <input
+              type="radio"
+              name="checkBox"
+              value="oneWeek"
+              id="radioSecond"
+              onChange={handleOneWeek}
+            />
+            <label>One week</label>
             {onClickedOneWeek && <DateRangeInput />}
-          </label>
+          </CheckboxWrapper>
         </WrapperClickedDay>
         <WrapperButton>
           <Button>Find a Chef</Button>
@@ -44,17 +56,19 @@ const BattonDate = () => {
 }
 
 export default BattonDate
+
 const Wrapper = styled.div`
   margin: 20px;
+  h1 {
+    justify-content: left;
+    margin: 10px;
+  }
 `
 const WrapperClickedDay = styled.div`
   display: flex;
-
   label {
     color: ${black};
     margin: 5px;
-  }
-  ${mediaXs} {
   }
 `
 const MainWrapper = styled.div`
@@ -63,7 +77,13 @@ const MainWrapper = styled.div`
   background-color: ${white};
   width: 380px;
   border-radius: 15px;
+  ${mediaXs} {
+    border-radius: 0px;
+  }
 `
 const WrapperButton = styled.div`
   margin-top: 380px;
+`
+const CheckboxWrapper = styled.div`
+  margin: 5px;
 `
