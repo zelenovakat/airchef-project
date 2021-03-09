@@ -37,7 +37,7 @@ const MobileMenu = () => {
                 <MenuLink href="/chefsPage">FAQ</MenuLink>
               </li>
               <li>
-                <MenuLink href="/chefsPage">!!!</MenuLink>
+                <MenuLink href="/restaurantsPage">!!!</MenuLink>
               </li>
             </ul>
           </BodyDiv>
