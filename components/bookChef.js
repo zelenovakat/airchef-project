@@ -1,6 +1,6 @@
 import { useState } from "react"
-import SinglDateRangePicker from "../components/singleDatePicker"
-import DateRangePicker from "../components/dateRangePicker"
+import SinglDateRangePicker from "../components/SinglDateRangePicker"
+import DateRangePicker from "./DateRangePicker"
 import styled from "styled-components"
 import { GlobalStyle } from "../pages/_app"
 
@@ -9,17 +9,14 @@ import { black, white, grey, green } from "../components/colors"
 import { Button } from "../components/styles"
 
 const BookChef = () => {
-  const [onClickedDay, setClickedDay] = useState(false)
-  const [onClickedWeek, setClickedWeek] = useState(false)
-  const [isShow, setIsShow] = useState(false)
-  const handleClickDay = () => {
-    setClickedDay(!onClickedDay)
-    setIsShow(isShow === true)
+  const [showSingleDayCalendar, setSingleDayCalendar] = useState(false)
+
+  const handleClickSingleDayCalendar = () => {
+    setSingleDayCalendar(showSingleDayCalendar === true)
   }
 
   const handleClickWeek = () => {
-    setClickedWeek(!onClickedWeek)
-    setIsShow(isShow === false)
+    setSingleDayCalendar(showSingleDayCalendar === false)
   }
 
   return (
@@ -33,7 +30,7 @@ const BookChef = () => {
               name="checkBox"
               value="oneDay"
               id="radio1"
-              onClick={handleClickDay}
+              onClick={handleClickSingleDayCalendar}
             />
             <div>
               <label>One day</label>
@@ -57,7 +54,7 @@ const BookChef = () => {
             </div>
           </CheckboxWrapper>
         </WrapperClickedDay>
-        {isShow ? (
+        {showSingleDayCalendar ? (
           <CalendarWrapper>
             <SinglDateRangePicker />
           </CalendarWrapper>

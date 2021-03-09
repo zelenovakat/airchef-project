@@ -1,26 +1,21 @@
 import { useState } from "react"
-import SinglDateRangePicker from "../components/singleDatePicker"
-import DateRangePicker from "../components/dateRangePicker"
+import SinglDateRangePicker from "./SinglDateRangePicker"
+import DateRangePicker from "./DateRangePicker"
 import styled from "styled-components"
-import { black, white } from "../components/colors"
+import { black, white } from "./colors"
 import { GlobalStyle } from "../pages/_app"
-import { Button, ChefsTitle } from "../components/styles"
-import { mediaXs } from "../components/screen"
+import { Button, ChefsTitle } from "./styles"
+import { mediaXs } from "./screen"
 
 const BattonDate = () => {
-  const [onClickedDay, setClickedDay] = useState(false)
-  const [onClickedWeek, setClickedWeek] = useState(false)
-  const [isShow, setIsShow] = useState(false)
-
-  const handleClickDay = () => {
-    setClickedDay(!onClickedDay)
-    setIsShow(isShow === true)
+  const [showSingleDayCalendar, setSingleDayCalendar] = useState(false)
+  const handleClickSingleDayCalendar = () => {
+    setSingleDayCalendar(showSingleDayCalendar === true)
   }
-
   const handleClickWeek = () => {
-    setClickedWeek(!onClickedWeek)
-    setIsShow(isShow === false)
+    setSingleDayCalendar(showSingleDayCalendar === false)
   }
+
   return (
     <MainWrapper>
       <Wrapper>
@@ -32,13 +27,8 @@ const BattonDate = () => {
               type="radio"
               name="checkBox"
               value="oneDay"
-<<<<<<< HEAD
-              id="radioFirst"
-              onChange={handleOneDay}
-=======
               id="radio1"
-              onClick={handleClickDay}
->>>>>>> some changes to the calendar view
+              onClick={handleClickSingleDayCalendar}
             />
             <label>One day</label>
           </CheckboxWrapper>
@@ -47,22 +37,13 @@ const BattonDate = () => {
               type="radio"
               name="checkBox"
               value="oneWeek"
-<<<<<<< HEAD
-              id="radioSecond"
-              onChange={handleOneWeek}
-=======
               id="radio2"
-<<<<<<< HEAD
-              onClick={handleOneDay}
->>>>>>> working calendar
-=======
               onClick={handleClickWeek}
->>>>>>> some changes to the calendar view
             />
             <label>One week</label>
           </CheckboxWrapper>
         </WrapperClickedDay>
-        {isShow ? (
+        {showSingleDayCalendar ? (
           <CalendarWrapper>
             <DateRangePicker />
           </CalendarWrapper>

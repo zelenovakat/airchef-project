@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef } from "react"
 
-export const Content = ({ onClose, children }) => {
+export const ClickOutside = ({ onClose, children }) => {
   const ref = useRef(null)
   const escapeListener = useCallback((e) => {
     if (e.key === "Escape") {
