@@ -1,4 +1,5 @@
 import { createGlobalStyle, ThemeProvider } from "styled-components"
+import { mediaXs } from "../components/screen"
 export const GlobalStyle = createGlobalStyle`
 body {
     margin: 0;
@@ -13,13 +14,18 @@ body {
 }
 .DateRangePicker_picker__directionLeft_2{
   left:-105px !important;
+  ${mediaXs} {
+  left:-110px !important}
 }
 .SingleDatePicker_picker_1{
   left: 5px !important;
+  ${mediaXs} {
+  left:-10px !important}
 }
-
+.CalendarMonth.CalendarMonth_1{
+padding: 0px 25px;
 }
-
+}
 `
 
 const theme = {

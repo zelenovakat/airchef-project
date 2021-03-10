@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { black, white } from "../colors"
-import { mediaSmall, mediaXs } from "../screen"
+import { mediaXs } from "../screen"
 import MobileMenu from "./mobileMenu"
 import Link from "next/link"
 
@@ -43,9 +43,9 @@ const Header = () => {
 export default Header
 
 const MobileMenuDiv = styled.div`
-  display: flex;
-  ${mediaSmall} {
-    display: none;
+  display: none;
+  ${mediaXs} {
+    display: flex;
   }
 `
 

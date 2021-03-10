@@ -1,7 +1,7 @@
 import foodPic3 from "../components/shared/images/foodPic3.jpg"
 import styled from "styled-components"
 import Layout from "../components/layout"
-import ButtonDate from "../components/selectDateRange"
+import ButtonDate from "../components/BattonDate"
 import { black } from "../components/colors"
 import { mediaXs } from "../components/screen"
 
