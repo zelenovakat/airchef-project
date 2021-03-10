@@ -14,6 +14,9 @@ import { ChefsTitle } from "../../components/styles"
 const ChefId = () => {
   const router = useRouter()
   const { chefId } = router.query
+  if (!chefId) {
+    return null
+  }
   console.log(chefId)
   const chef = ChefsInfo.find((singleChef) => singleChef.id === chefId)
 

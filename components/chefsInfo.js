@@ -1,7 +1,7 @@
 import davidGreenwood from "./shared/images/davidGreenwood.jpg"
 import febrianZakari from "./shared/images/febrianZakari.jpg"
 import jeffSiepman from "./shared/images/jeffSiepman.jpg"
-import mario from "./shared/images/mario.jpg"
+import marioBlack from "./shared/images/marioBlack.jpg"
 import vinceFleming from "./shared/images/vinceFleming.jpg"
 import foodPic from "./shared/images/foodPic.jpg"
 import foodPic2 from "./shared/images/foodPic2.jpg"
@@ -17,7 +17,7 @@ export const ChefsInfo = [
     profileImg: davidGreenwood,
     pathname: "davidGreenwood",
     description:
-      "Повар – это специалист, в чьи обязанности входит приготовление пищи. Помимо самого приготовления, повар отвечает за подготовку продуктов: проверить их на свежесть, помыть, порезать, почистить. Внешняя привлекательность блюда - тоже задача повара. Ведь в пище важен не только вкус, но и запах и аппетитный вид.",
+      "A chef is a specialist whose job is to prepare food. In addition to the preparation itself, the chef is responsible for the preparation of products: check them for freshness, wash, cut, peel. The external attractiveness of the dish is also the chef's task. Indeed, in food, not only taste is important, but also smell and appetizing appearance.",
     picFoodOne: foodPic,
     picFoodTwo: foodPic2,
     picFoodThree: foodPic3,
@@ -33,7 +33,7 @@ export const ChefsInfo = [
     profileImg: febrianZakari,
     pathname: "febrianZakari",
     description:
-      "Повар – это специалист, в чьи обязанности входит приготовление пищи. Помимо самого приготовления, повар отвечает за подготовку продуктов: проверить их на свежесть, помыть, порезать, почистить. Внешняя привлекательность блюда - тоже задача повара. Ведь в пище важен не только вкус, но и запах и аппетитный вид.",
+      "A chef is a specialist whose job is to prepare food. In addition to the preparation itself, the chef is responsible for the preparation of products: check them for freshness, wash, cut, peel. The external attractiveness of the dish is also the chef's task. Indeed, in food, not only taste is important, but also smell and appetizing appearance.",
     picFoodOne: foodPic,
     picFoodTwo: foodPic2,
     picFoodThree: foodPic3,
@@ -49,7 +49,7 @@ export const ChefsInfo = [
     profileImg: jeffSiepman,
     pathname: "jeffSiepman",
     description:
-      "Повар – это специалист, в чьи обязанности входит приготовление пищи. Помимо самого приготовления, повар отвечает за подготовку продуктов: проверить их на свежесть, помыть, порезать, почистить. Внешняя привлекательность блюда - тоже задача повара. Ведь в пище важен не только вкус, но и запах и аппетитный вид.",
+      "A chef is a specialist whose job is to prepare food. In addition to the preparation itself, the chef is responsible for the preparation of products: check them for freshness, wash, cut, peel. The external attractiveness of the dish is also the chef's task. Indeed, in food, not only taste is important, but also smell and appetizing appearance.",
     picFoodOne: foodPic,
     picFoodTwo: foodPic2,
     picFoodThree: foodPic3,
@@ -58,14 +58,14 @@ export const ChefsInfo = [
     ind: "29600 Marbella",
   },
   {
-    id: "Mario",
-    name: "Mario",
+    id: "marioBlack",
+    name: "Mario Black",
     titleRestaurant: "Paella's màs",
     titleFood: "Food: Indian,European",
-    profileImg: mario,
+    profileImg: marioBlack,
     pathname: "marioPage",
     description:
-      "Повар – это специалист, в чьи обязанности входит приготовление пищи. Помимо самого приготовления, повар отвечает за подготовку продуктов: проверить их на свежесть, помыть, порезать, почистить. Внешняя привлекательность блюда - тоже задача повара. Ведь в пище важен не только вкус, но и запах и аппетитный вид.",
+      "A chef is a specialist whose job is to prepare food. In addition to the preparation itself, the chef is responsible for the preparation of products: check them for freshness, wash, cut, peel. The external attractiveness of the dish is also the chef's task. Indeed, in food, not only taste is important, but also smell and appetizing appearance.",
     picFoodOne: foodPic,
     picFoodTwo: foodPic2,
     picFoodThree: foodPic3,
@@ -81,7 +81,7 @@ export const ChefsInfo = [
     profileImg: vinceFleming,
     pathname: "vinceFleming",
     description:
-      "Повар – это специалист, в чьи обязанности входит приготовление пищи. Помимо самого приготовления, повар отвечает за подготовку продуктов: проверить их на свежесть, помыть, порезать, почистить. Внешняя привлекательность блюда - тоже задача повара. Ведь в пище важен не только вкус, но и запах и аппетитный вид.",
+      "A chef is a specialist whose job is to prepare food. In addition to the preparation itself, the chef is responsible for the preparation of products: check them for freshness, wash, cut, peel. The external attractiveness of the dish is also the chef's task. Indeed, in food, not only taste is important, but also smell and appetizing appearance.",
     picFoodOne: foodPic,
     picFoodTwo: foodPic2,
     picFoodThree: foodPic3,

@@ -27,11 +27,12 @@ export const DescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-width: 500px;
+  h2 {
+    margin-bottom: 0;
+  }
   ${mediaXs} {
     min-width: 300px;
-  }
-  p {
-    margin: 5px;
+    margin: 15px;
   }
 `
 export const Image = styled.img`
