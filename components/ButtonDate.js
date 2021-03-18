@@ -1,5 +1,5 @@
 import { useState } from "react"
-import SinglDateRangePicker from "./SinglDateRangePicker"
+import SingleDateRangePicker from "./SingleDateRangePicker"
 import DateRangePicker from "./DateRangePicker"
 import styled from "styled-components"
 import { black, white } from "./colors"
@@ -7,13 +7,13 @@ import { GlobalStyle } from "../pages/_app"
 import { Button, ChefsTitle } from "./styles"
 import { mediaXs } from "./screen"
 
-const BattonDate = () => {
+const ButtonDate = () => {
   const [showSingleDayCalendar, setSingleDayCalendar] = useState(false)
   const handleClickSingleDayCalendar = () => {
-    setSingleDayCalendar(showSingleDayCalendar === true)
+    setSingleDayCalendar(true)
   }
   const handleClickWeek = () => {
-    setSingleDayCalendar(showSingleDayCalendar === false)
+    setSingleDayCalendar(false)
   }
 
   return (
@@ -44,13 +44,13 @@ const BattonDate = () => {
           </CheckboxWrapper>
         </WrapperClickedDay>
         {showSingleDayCalendar ? (
+          <CalendarWrapperWeek>
+            <SingleDateRangePicker />
+          </CalendarWrapperWeek>
+        ) : (
           <CalendarWrapper>
             <DateRangePicker />
           </CalendarWrapper>
-        ) : (
-          <CalendarWrapperWeek>
-            <SinglDateRangePicker />
-          </CalendarWrapperWeek>
         )}
       </Wrapper>
       <Button>FIND A CHEF</Button>
@@ -58,7 +58,7 @@ const BattonDate = () => {
   )
 }
 
-export default BattonDate
+export default ButtonDate
 const CalendarWrapper = styled.div`
   margin: 10px;
 `

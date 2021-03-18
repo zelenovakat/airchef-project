@@ -1,7 +1,7 @@
 import React from "react"
 import RestaurantsMap from "../components/shared/restaurantsMap"
 import Layout from "../components/layout"
-const restaurantsPage = () => {
+const restaurants = () => {
   return (
     <Layout>
       <div>
@@ -11,4 +11,4 @@ const restaurantsPage = () => {
   )
 }
 
-export default restaurantsPage
+export default restaurants

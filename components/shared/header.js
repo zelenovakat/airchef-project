@@ -10,7 +10,7 @@ const Header = () => {
       <MenuWrapper>
         <Menu>
           <li>
-            <Link href="/chefsPage">
+            <Link href="/chefs">
               <MenuLink>Chefs</MenuLink>
             </Link>
           </li>
@@ -20,7 +20,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/restaurantsPage">
+            <Link href="/restaurants">
               <MenuLink>!!!</MenuLink>
             </Link>
           </li>
@@ -28,7 +28,7 @@ const Header = () => {
       </MenuWrapper>
       <Logo>
         <li>
-          <Link href="/firstPage">
+          <Link href="/main">
             <LogoLink>Airchef</LogoLink>
           </Link>
         </li>

@@ -17,10 +17,7 @@ const ChefId = () => {
   if (!chefId) {
     return null
   }
-  console.log(chefId)
   const chef = ChefsInfo.find((singleChef) => singleChef.id === chefId)
-
-  console.log(chef)
   return (
     <Layout>
       <MainConteiner key={chef.id}>

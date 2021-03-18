@@ -1,11 +1,11 @@
 import foodPic3 from "../components/shared/images/foodPic3.jpg"
 import styled from "styled-components"
 import Layout from "../components/layout"
-import ButtonDate from "../components/BattonDate"
+import ButtonDate from "../components/ButtonDate"
 import { black } from "../components/colors"
 import { mediaXs } from "../components/screen"
 
-const firstPage = () => {
+const Main = () => {
   return (
     <Layout>
       <MainWrapper>
@@ -22,7 +22,7 @@ const firstPage = () => {
   )
 }
 
-export default firstPage
+export default Main
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-evenly;

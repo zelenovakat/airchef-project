@@ -5,7 +5,7 @@ import { DayPickerSingleDateController } from "react-dates"
 import "react-dates/lib/css/_datepicker.css"
 import "react-dates/initialize"
 
-class SinglDateRangePicker extends Component {
+class SingleDateRangePicker extends Component {
   state = {
     startDate: moment(),
     endDate: moment(),
@@ -41,4 +41,4 @@ class SinglDateRangePicker extends Component {
   }
 }
 
-export default SinglDateRangePicker
+export default SingleDateRangePicker

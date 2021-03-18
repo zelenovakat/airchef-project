@@ -1,5 +1,5 @@
 import { useState } from "react"
-import SinglDateRangePicker from "../components/SinglDateRangePicker"
+import SingleDateRangePicker from "./SingleDateRangePicker"
 import DateRangePicker from "./DateRangePicker"
 import styled from "styled-components"
 import { GlobalStyle } from "../pages/_app"
@@ -56,7 +56,7 @@ const BookChef = () => {
         </WrapperClickedDay>
         {showSingleDayCalendar ? (
           <CalendarWrapper>
-            <SinglDateRangePicker />
+            <SingleDateRangePicker />
           </CalendarWrapper>
         ) : (
           <CalendarWrapperWeek>
