@@ -7,7 +7,8 @@ import { GlobalStyle } from "../pages/_app"
 import { Button, ChefsTitle } from "./styles"
 import { mediaXs } from "./screen"
 
-const ButtonDate = () => {
+const ButtonDate = (props) => {
+  console.log(props.price)
   const [showSingleDayCalendar, setSingleDayCalendar] = useState(false)
   const handleClickSingleDayCalendar = () => {
     setSingleDayCalendar(true)
@@ -15,6 +16,16 @@ const ButtonDate = () => {
   const handleClickWeek = () => {
     setSingleDayCalendar(false)
   }
+  // {
+  //   props.price.map((item) => {
+  //     return (
+  //       <>
+  //         <label>{item.oneDay}</label>
+  //         <label>{item.oneWeek}</label>
+  //       </>
+  //     )
+  //   })
+  // }
 
   return (
     <MainWrapper>

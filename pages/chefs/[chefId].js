@@ -1,6 +1,5 @@
 import { useRouter } from "next/router"
 import { ChefsInfo } from "../../components/chefsInfo"
-import BookChef from "../../components/bookChef"
 import Layout from "../../components/layout"
 import { DescriptionWrapper } from "../../components/styles"
 import { Image } from "../../components/styles"
@@ -10,6 +9,8 @@ import { MainConteiner } from "../../components/styles"
 import { ImageFood } from "../../components/styles"
 import { SectionRight } from "../../components/styles"
 import { ChefsTitle } from "../../components/styles"
+import ButtonDate from "../../components/ButtonDate"
+import price from "../../components/price"
 
 const ChefId = () => {
   const router = useRouter()
@@ -17,6 +18,7 @@ const ChefId = () => {
   if (!chefId) {
     return null
   }
+
   const chef = ChefsInfo.find((singleChef) => singleChef.id === chefId)
   return (
     <Layout>
@@ -42,7 +44,7 @@ const ChefId = () => {
         </SectionCenter>
         <SectionRight>
           <h2>Book {chef.name} now</h2>
-          <BookChef />
+          <ButtonDate price={price} />
         </SectionRight>
       </MainConteiner>
     </Layout>
