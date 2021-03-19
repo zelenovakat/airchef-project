@@ -8,7 +8,7 @@ import { Button, ChefsTitle } from "./styles"
 import { mediaXs } from "./screen"
 
 const ButtonDate = (props) => {
-  console.log(props.price)
+  console.log("MY PRICE ==========>", props.price)
   const [showSingleDayCalendar, setSingleDayCalendar] = useState(false)
   const handleClickSingleDayCalendar = () => {
     setSingleDayCalendar(true)
