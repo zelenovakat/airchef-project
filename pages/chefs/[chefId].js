@@ -24,7 +24,7 @@ const ChefId = () => {
     <Layout>
       <MainConteiner key={chef.id}>
         <SectionLeft>
-          <Image src={chef.profileImg} alt="" />
+          <Image src={chef.profileImg} alt="Chef" />
           <DescriptionWrapper>
             <ChefsTitle>
               {chef.name} from {chef.titleRestaurant}
@@ -37,10 +37,10 @@ const ChefId = () => {
           </DescriptionWrapper>
         </SectionLeft>
         <SectionCenter>
-          <ImageFood src={chef.picFoodOne} alt="" />
-          <ImageFood src={chef.picFoodTwo} alt="" />
-          <ImageFood src={chef.picFoodThree} alt="" />
-          <ImageFood src={chef.picFoodFour} alt="" />
+          <ImageFood src={chef.picFoodOne} alt="Food picture" />
+          <ImageFood src={chef.picFoodTwo} alt="Food picture" />
+          <ImageFood src={chef.picFoodThree} alt="Food picture" />
+          <ImageFood src={chef.picFoodFour} alt="Food picture" />
         </SectionCenter>
         <SectionRight>
           <h2>Book {chef.name} now</h2>

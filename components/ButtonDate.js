@@ -16,57 +16,58 @@ const ButtonDate = (props) => {
   const handleClickWeek = () => {
     setSingleDayCalendar(false)
   }
-  // {
-  //   props.price.map((item) => {
-  //     return (
-  //       <>
-  //         <label>{item.oneDay}</label>
-  //         <label>{item.oneWeek}</label>
-  //       </>
-  //     )
-  //   })
-  // }
+  const mapPrice = props.price.map((cost) => {
+    return (
+      <MainWrapper key={cost.id}>
+        <Wrapper>
+          <ChefsTitle>Book your chef</ChefsTitle>
+          <GlobalStyle />
 
-  return (
-    <MainWrapper>
-      <Wrapper>
-        <ChefsTitle>Book your chef</ChefsTitle>
-        <GlobalStyle />
-        <WrapperClickedDay>
-          <CheckboxWrapper>
-            <input
-              type="radio"
-              name="checkBox"
-              value="oneDay"
-              id="radio1"
-              onClick={handleClickSingleDayCalendar}
-            />
-            <label>One day</label>
-          </CheckboxWrapper>
-          <CheckboxWrapper>
-            <input
-              type="radio"
-              name="checkBox"
-              value="oneWeek"
-              id="radio2"
-              onClick={handleClickWeek}
-            />
-            <label>One week</label>
-          </CheckboxWrapper>
-        </WrapperClickedDay>
-        {showSingleDayCalendar ? (
-          <CalendarWrapperWeek>
-            <SingleDateRangePicker />
-          </CalendarWrapperWeek>
-        ) : (
-          <CalendarWrapper>
-            <DateRangePicker />
-          </CalendarWrapper>
-        )}
-      </Wrapper>
-      <Button>FIND A CHEF</Button>
-    </MainWrapper>
-  )
+          <WrapperClickedDay>
+            <CheckboxWrapper>
+              <input
+                type="radio"
+                name="checkBox"
+                value="oneDay"
+                id="radio1"
+                onClick={handleClickSingleDayCalendar}
+              />
+              <label>One day</label>
+              <label>{cost.oneDay}</label>
+              {/* {props.price.map((item, id) => {
+              return <label key={id}>{item.oneDay}</label>
+            })} */}
+            </CheckboxWrapper>
+            <CheckboxWrapper>
+              <input
+                type="radio"
+                name="checkBox"
+                value="oneWeek"
+                id="radio2"
+                onClick={handleClickWeek}
+              />
+              <label>One week</label>
+              <label>{cost.oneWeek}</label>
+              {/* {props.price.map((item, id) => {
+              return <label key={id}>{item.oneWeek}</label>
+            })} */}
+            </CheckboxWrapper>
+          </WrapperClickedDay>
+          {showSingleDayCalendar ? (
+            <CalendarWrapperWeek>
+              <SingleDateRangePicker />
+            </CalendarWrapperWeek>
+          ) : (
+            <CalendarWrapper>
+              <DateRangePicker />
+            </CalendarWrapper>
+          )}
+        </Wrapper>
+        <Button>FIND A CHEF</Button>
+      </MainWrapper>
+    )
+  })
+  return <div>{mapPrice}</div>
 }
 
 export default ButtonDate
