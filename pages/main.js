@@ -6,12 +6,14 @@ import { black } from "../components/colors"
 import { mediaXs } from "../components/screen"
 
 const Main = () => {
+  const title = "Book your chef"
+  const button = "FIND A CHEF"
   return (
     <Layout>
       <MainWrapper>
         <Wrapper>
           <DateWrapper>
-            <ButtonDate />
+            <ButtonDate title={title} button={button} />
           </DateWrapper>
           <ImgWrapper>
             <img src={foodPic3} />

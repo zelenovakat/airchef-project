@@ -10,11 +10,15 @@ import { ImageFood } from "../../components/styles"
 import { SectionRight } from "../../components/styles"
 import { ChefsTitle } from "../../components/styles"
 import ButtonDate from "../../components/ButtonDate"
-import price from "../../components/price"
 
 const ChefId = () => {
+  const button = "BOOK CHEF"
+  const priceOfWeek = "200 EUR"
+  const priceOfDay = "85 EUR"
+
   const router = useRouter()
   const { chefId } = router.query
+
   if (!chefId) {
     return null
   }
@@ -44,7 +48,7 @@ const ChefId = () => {
         </SectionCenter>
         <SectionRight>
           <h2>Book {chef.name} now</h2>
-          <ButtonDate price={price} />
+          <ButtonDate priceOfDay={priceOfDay} priceOfWeek={priceOfWeek} button={button} />
         </SectionRight>
       </MainConteiner>
     </Layout>

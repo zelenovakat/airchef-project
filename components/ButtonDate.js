@@ -2,13 +2,17 @@ import { useState } from "react"
 import SingleDateRangePicker from "./SingleDateRangePicker"
 import DateRangePicker from "./DateRangePicker"
 import styled from "styled-components"
-import { black, white } from "./colors"
+import { black, white, green, grey } from "./colors"
 import { GlobalStyle } from "../pages/_app"
 import { Button, ChefsTitle } from "./styles"
 import { mediaXs } from "./screen"
 
 const ButtonDate = (props) => {
-  console.log("MY PRICE ==========>", props.price)
+  const title = props.title
+  const button = props.button
+  const priceOfWeek = props.priceOfWeek
+  const priceOfDay = props.priceOfDay
+
   const [showSingleDayCalendar, setSingleDayCalendar] = useState(false)
   const handleClickSingleDayCalendar = () => {
     setSingleDayCalendar(true)
@@ -16,16 +20,12 @@ const ButtonDate = (props) => {
   const handleClickWeek = () => {
     setSingleDayCalendar(false)
   }
-  if (props.price.length === 0) {
-    return null
-  }
-  // const mapPrice = props.price.map((cost) => {
+
   return (
     <MainWrapper>
       <Wrapper>
-        <ChefsTitle>Book your chef</ChefsTitle>
+        <ChefsTitle>{title}</ChefsTitle>
         <GlobalStyle />
-
         <WrapperClickedDay>
           <CheckboxWrapper>
             <input
@@ -35,11 +35,10 @@ const ButtonDate = (props) => {
               id="radio1"
               onClick={handleClickSingleDayCalendar}
             />
-            <label>One day</label>
-            {/* <label>{cost.oneDay}</label> */}
-            {props.price.map((item, id) => {
-              return <label key={id}>{item.oneDay}</label>
-            })}
+            <ForLable>
+              <label htmlFor="radio1">One day</label>
+              <label htmlFor="radio1">{priceOfDay}</label>
+            </ForLable>
           </CheckboxWrapper>
           <CheckboxWrapper>
             <input
@@ -49,11 +48,10 @@ const ButtonDate = (props) => {
               id="radio2"
               onClick={handleClickWeek}
             />
-            <label>One week</label>
-            {/* <label>{cost.oneWeek}</label> */}
-            {props.price.map((item, id) => {
-              return <label key={id}>{item.oneWeek}</label>
-            })}
+            <ForLable>
+              <label htmlFor="radio2">One week</label>
+              <label htmlFor="radio2">{priceOfWeek}</label>
+            </ForLable>
           </CheckboxWrapper>
         </WrapperClickedDay>
         {showSingleDayCalendar ? (
@@ -66,21 +64,21 @@ const ButtonDate = (props) => {
           </CalendarWrapper>
         )}
       </Wrapper>
-      <Button>FIND A CHEF</Button>
+      <Button>{button}</Button>
     </MainWrapper>
   )
-  // })
-  // return <div>{mapPrice}</div>
 }
 
 export default ButtonDate
 const CalendarWrapper = styled.div`
   margin: 10px;
+  position: absolute;
+  top: 100px;
 `
 const CalendarWrapperWeek = styled.div`
   margin: 10px;
   position: absolute;
-  top: 106px;
+  top: 100px;
 `
 
 const Wrapper = styled.div`
@@ -97,7 +95,6 @@ const WrapperClickedDay = styled.div`
   display: flex;
   label {
     color: ${black};
-    margin: 5px;
   }
 `
 const MainWrapper = styled.div`
@@ -115,4 +112,10 @@ const MainWrapper = styled.div`
 
 const CheckboxWrapper = styled.div`
   margin: 5px;
+  display: flex;
+`
+const ForLable = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
 `
