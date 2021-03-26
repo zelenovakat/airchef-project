@@ -13,7 +13,6 @@ export const Restaurants = [
     titleFood: "Food: European",
     linkMenu: "Restaurant menu",
     profileImg: restaurantDish1,
-    link: "/",
   },
   {
     id: 2,
@@ -21,7 +20,6 @@ export const Restaurants = [
     titleFood: "Food: Asian,Indian",
     linkMenu: "Restaurant menu",
     profileImg: restaurantDish2,
-    link: "/",
   },
   {
     id: 3,
@@ -29,7 +27,6 @@ export const Restaurants = [
     titleFood: "Food: Indian",
     linkMenu: "Restaurant menu",
     profileImg: restaurantDish3,
-    link: "/",
   },
   {
     id: 4,
@@ -37,7 +34,6 @@ export const Restaurants = [
     titleFood: "Food: Indian,European",
     linkMenu: "Restaurant menu",
     profileImg: restaurantDish4,
-    link: "/",
   },
   {
     id: 5,
@@ -45,7 +41,6 @@ export const Restaurants = [
     titleFood: "Food: European",
     linkMenu: "Restaurant menu",
     profileImg: restaurantDish5,
-    link: "/",
   },
   {
     id: 6,
@@ -53,6 +48,5 @@ export const Restaurants = [
     titleFood: "Food: European",
     linkMenu: "Restaurant menu",
     profileImg: restaurantDish6,
-    link: "/",
   },
 ]
