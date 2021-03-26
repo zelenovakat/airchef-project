@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { black, white } from "../colors"
 import { mediaXs } from "../screen"
-import MobileMenu from "./mobileMenu"
+import MobileMenu from "./MobileMenu"
 import Link from "next/link"
 
 const Header = () => {
