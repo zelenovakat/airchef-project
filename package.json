@@ -14,7 +14,7 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "file-loader": "^6.2.0",
     "moment": "^2.29.1",
-    "next": "10.0.9",
+    "next": "10.0.5",
     "next-images": "^1.6.2",
     "react": "^17.0.1",
     "react-dates": "^21.8.0",
