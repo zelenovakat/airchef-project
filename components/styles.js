@@ -81,7 +81,7 @@ export const ImageFood = styled.img`
   margin: 5px;
 `
 export const SectionRight = styled.div`
-  width: 24%;
+  width: 27%;
   border-radius: 5px;
   box-shadow: ${grey} 2px 3px 3px 3px;
   margin: 10px 5px;
@@ -92,6 +92,6 @@ export const SectionRight = styled.div`
     margin: 0px;
   }
   h2 {
-    margin: 20px 15px;
+    margin: 20px 15px 0px 15px;
   }
 `

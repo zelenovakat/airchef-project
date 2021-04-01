@@ -1,6 +1,6 @@
-import FirstPage from "./firstPage"
+import Main from "./main"
 
 const Home = () => {
-  return <FirstPage />
+  return <Main />
 }
 export default Home

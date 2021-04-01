@@ -25,6 +25,7 @@ body {
 .CalendarMonth.CalendarMonth_1{
 padding: 0px 25px;
 }
+
 }
 `
 

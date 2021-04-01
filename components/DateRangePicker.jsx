@@ -18,10 +18,6 @@ class DateRangePicker extends Component {
     this.setState({ focusedInput: focusedInput || "startDate" })
   }
 
-  dayClick = (date) => {
-    console.log(date)
-  }
-
   render() {
     return (
       <form>

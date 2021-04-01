@@ -24,6 +24,8 @@ export const ChefsInfo = [
     picFoodFour: restaurantDish2,
     address: "Calle Ramòn Gòmez de la Serna, 23",
     ind: "29600 Marbella",
+    priceOfDay: "85 EUR",
+    priceOfWeek: "200 EUR",
   },
   {
     id: "FebrianZakari",
@@ -40,6 +42,8 @@ export const ChefsInfo = [
     picFoodFour: restaurantDish2,
     address: "Calle Ramòn Gòmez de la Serna, 23",
     ind: "29600 Marbella",
+    priceOfDay: "85 EUR",
+    priceOfWeek: "200 EUR",
   },
   {
     id: "JeffSiepman",
@@ -56,6 +60,8 @@ export const ChefsInfo = [
     picFoodFour: restaurantDish2,
     address: "Calle Ramòn Gòmez de la Serna, 23",
     ind: "29600 Marbella",
+    priceOfDay: "85 EUR",
+    priceOfWeek: "200 EUR",
   },
   {
     id: "marioBlack",
@@ -72,6 +78,8 @@ export const ChefsInfo = [
     picFoodFour: restaurantDish2,
     address: "Calle Ramòn Gòmez de la Serna, 23",
     ind: "29600 Marbella",
+    priceOfDay: "85 EUR",
+    priceOfWeek: "200 EUR",
   },
   {
     id: "VinceFleming",
@@ -88,5 +96,7 @@ export const ChefsInfo = [
     picFoodFour: restaurantDish2,
     address: "Calle Ramòn Gòmez de la Serna, 23",
     ind: "29600 Marbella",
+    priceOfDay: "85 EUR",
+    priceOfWeek: "200 EUR",
   },
 ]

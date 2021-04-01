@@ -1,17 +1,19 @@
 import foodPic3 from "../components/shared/images/foodPic3.jpg"
 import styled from "styled-components"
 import Layout from "../components/layout"
-import ButtonDate from "../components/BattonDate"
+import ButtonDate from "../components/ButtonDate"
 import { black } from "../components/colors"
 import { mediaXs } from "../components/screen"
 
-const firstPage = () => {
+const Main = () => {
+  const title = "Book your chef"
+  const button = "FIND A CHEF"
   return (
     <Layout>
       <MainWrapper>
         <Wrapper>
           <DateWrapper>
-            <ButtonDate />
+            <ButtonDate title={title} button={button} />
           </DateWrapper>
           <ImgWrapper>
             <img src={foodPic3} />
@@ -22,7 +24,7 @@ const firstPage = () => {
   )
 }
 
-export default firstPage
+export default Main
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-evenly;

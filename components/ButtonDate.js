@@ -1,27 +1,30 @@
 import { useState } from "react"
-import SinglDateRangePicker from "../components/SinglDateRangePicker"
+import SingleDateRangePicker from "./SingleDateRangePicker"
 import DateRangePicker from "./DateRangePicker"
 import styled from "styled-components"
+import { black, white, green, grey } from "./colors"
 import { GlobalStyle } from "../pages/_app"
-
+import { Button, ChefsTitle } from "./styles"
 import { mediaXs } from "./screen"
-import { black, white, grey, green } from "../components/colors"
-import { Button } from "../components/styles"
 
-const BookChef = () => {
+const ButtonDate = (props) => {
+  const title = props.title
+  const button = props.button
+  const priceOfWeek = props.priceOfWeek
+  const priceOfDay = props.priceOfDay
+
   const [showSingleDayCalendar, setSingleDayCalendar] = useState(false)
-
   const handleClickSingleDayCalendar = () => {
-    setSingleDayCalendar(showSingleDayCalendar === true)
+    setSingleDayCalendar(true)
   }
-
   const handleClickWeek = () => {
-    setSingleDayCalendar(showSingleDayCalendar === false)
+    setSingleDayCalendar(false)
   }
 
   return (
     <MainWrapper>
       <Wrapper>
+        <ChefsTitle>{title}</ChefsTitle>
         <GlobalStyle />
         <WrapperClickedDay>
           <CheckboxWrapper>
@@ -32,13 +35,11 @@ const BookChef = () => {
               id="radio1"
               onClick={handleClickSingleDayCalendar}
             />
-            <div>
-              <label>One day</label>
-              <br />
-              <PriceWrapper>85 EUR</PriceWrapper>
-            </div>
+            <ForLable>
+              <label htmlFor="radio1">One day</label>
+              <label htmlFor="radio1">{priceOfDay}</label>
+            </ForLable>
           </CheckboxWrapper>
-
           <CheckboxWrapper>
             <input
               type="radio"
@@ -47,83 +48,74 @@ const BookChef = () => {
               id="radio2"
               onClick={handleClickWeek}
             />
-            <div>
-              <label>One week</label>
-              <br />
-              <PriceWrapper>200 EUR</PriceWrapper>
-            </div>
+            <ForLable>
+              <label htmlFor="radio2">One week</label>
+              <label htmlFor="radio2">{priceOfWeek}</label>
+            </ForLable>
           </CheckboxWrapper>
         </WrapperClickedDay>
         {showSingleDayCalendar ? (
-          <CalendarWrapper>
-            <SinglDateRangePicker />
-          </CalendarWrapper>
-        ) : (
           <CalendarWrapperWeek>
-            <DateRangePicker />
+            <SingleDateRangePicker />
           </CalendarWrapperWeek>
+        ) : (
+          <CalendarWrapper>
+            <DateRangePicker />
+          </CalendarWrapper>
         )}
       </Wrapper>
-      <Button>BOOK CHEF</Button>
+      <Button>{button}</Button>
     </MainWrapper>
   )
 }
 
-export default BookChef
-
+export default ButtonDate
 const CalendarWrapper = styled.div`
-  margin-top: 20px;
+  margin: 10px;
+  position: absolute;
+  top: 100px;
 `
 const CalendarWrapperWeek = styled.div`
-  margin-top: 20px;
+  margin: 10px;
   position: absolute;
-  top: 75px;
+  top: 100px;
 `
+
 const Wrapper = styled.div`
-  margin: 15px;
-  height: 505px;
+  margin: 20px;
   h1 {
     justify-content: left;
     margin: 10px;
   }
+  ${mediaXs} {
+    height: 470px;
+  }
 `
 const WrapperClickedDay = styled.div`
   display: flex;
-  justify-content: space-around;
   label {
     color: ${black};
-    margin: 5px;
-  }
-  ${mediaXs} {
-    justify-content: left;
   }
 `
 const MainWrapper = styled.div`
+  height: 505px;
   display: flex;
   flex-direction: column;
   background-color: ${white};
+  width: 380px;
   border-radius: 15px;
   position: relative;
-  width: 100%;
-  height: 480px;
   ${mediaXs} {
     border-radius: 0px;
   }
 `
 
 const CheckboxWrapper = styled.div`
-  border: 2px solid ${grey};
-  padding: 10px;
+  margin: 5px;
   display: flex;
-  place-items: center;
-  &:hover {
-    cursor: pointer;
-    border-color: ${green};
-  }
-  ${mediaXs} {
-    margin-right: 10px;
-  }
 `
-const PriceWrapper = styled.label`
-  margin-left: 22px;
+const ForLable = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
 `
