@@ -74,7 +74,7 @@ export const MainConteiner = styled.div`
   }
 `
 export const ImageFood = styled.img`
-  width: 205px;
+  width: 203px;
   height: 320px;
   overflow: hidden;
   object-fit: cover;

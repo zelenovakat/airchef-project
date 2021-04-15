@@ -1,13 +1,12 @@
 import { Restaurants } from "./restaurants"
 import styled from "styled-components"
 import { grey } from "../colors"
-import Link from "next/link"
 
 const RestaurantsMap = () => {
   const mappedRestaurants = Restaurants.map((restaurant) => {
     return (
       <MainDiv key={restaurant.id}>
-        <Link href={restaurant.link}>
+        <div>
           <MainLink>
             <Image src={restaurant.profileImg} alt="The best restaurants in Italy" />
             <div>
@@ -16,7 +15,7 @@ const RestaurantsMap = () => {
               <p>{restaurant.titleFood}</p>
             </div>
           </MainLink>
-        </Link>
+        </div>
       </MainDiv>
     )
   })
